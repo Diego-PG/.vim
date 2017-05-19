@@ -1,0 +1,6 @@
+[submodule "/home/diego/.vim/bundle/lightline.vim"]
+	path = /home/diego/.vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "bundle/fugitive.vim"]
+	path = bundle/fugitive.vim
+	url = https://github.com/tpope/vim-fugitive.git
