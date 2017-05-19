@@ -18,7 +18,8 @@ set showmatch "Resaltar los parentesis
 set noshowmode	"No muestra el modo de vim en la parte de abajo. Lo que quitado
 		"porque ya aparece en lightline
 
-autocmd FileType ruby,yaml :setlocal sw=2 ts=2 sts=0 " Two spaces for HTML files "
+autocmd FileType ruby,yaml :setlocal sw=2 ts=2 sts=0 "Tabs de 2 espacios para
+							" ruby y yaml
 
 "Word wrap
 set wrap "Activar word wrap
