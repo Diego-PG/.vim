@@ -8,8 +8,8 @@ colorscheme basic-dark
 set lines=30 columns=107
 set colorcolumn=80
 
-let mapleader=" "
-map <leader>s :source ~/.vimrc<CR>
+let mapleader=" " "Remapear leader key a espacio
+map <leader>s :source ~/.vimrc<CR>| "Refrescar vimrc
 
 autocmd BufWritePre * :%s/\s\+$//e "Eliminar espacios en blanco al guardar
 
@@ -17,6 +17,24 @@ set showmatch "Resaltar los parentesis
 
 set noshowmode	"No muestra el modo de vim en la parte de abajo. Lo que quitado
 		"porque ya aparece en lightline
+
+"Word wrap
+set wrap "Activar word wrap
+set linebreak "Saltar de linea solo en ciertos caracteres
+set nolist "List bloquea lo anterior
+"No escirbir el word wrap al fichero, solo mostrarlo por pantalla
+set textwidth=0
+set wrapmargin=0
+
+"Moverse entre las lineas de la pantalla y no las reales. Mejor no utilizar j
+"y k porque puede acarrear problemas con shortcuts y plugins.
+imap <silent> <Down> <C-o>gj
+imap <silent> <Up> <C-o>gk
+nmap <silent> <Down> gj
+nmap <silent> <Up> gk
+"nmap j gj
+"nmap k gk
+
 
 "
 "Plugins
