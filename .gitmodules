@@ -7,3 +7,9 @@
 [submodule "/home/diego/.vim/bundle/nerdtree"]
 	path = /home/diego/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-multiple-cursors"]
+	path = bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
