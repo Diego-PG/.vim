@@ -13,6 +13,3 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/NEDRComenter.vim"]
-	path = bundle/NEDRComenter.vim
-	url = https://github.com/scrooloose/nerdcommenter.git
