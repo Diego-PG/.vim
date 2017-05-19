@@ -5,7 +5,7 @@ set number
 syntax enable
 colorscheme basic-dark
 
-set lines=30 columns=110
+set lines=30 columns=107
 set colorcolumn=80
 
 let mapleader=" "
@@ -40,3 +40,13 @@ let g:lightline = {
       \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
       \ },
       \ }	"Tengo que pensar si merece la pena instalar la fuente powerline
+
+"Nerdtree
+let NERDTreeShowHidden=1 "Muestra archivos ocultos en NERDTree
+let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp'] "Ficheros ignorados
+let NERDTreeWinSize = 20 "Modifico la anchura de NERDTree
+nmap <leader>n :NERDTreeToggle<CR>| "Encender/apagar NERDTree
+nmap <leader>j :NERDTreeFind<CR>| "Ir al fichero señalado en NERDTree
+autocmd VimEnter * NERDTree "Abrir NEDRTree al encender vim
+autocmd VimEnter * wincmd p "No centrar en el fichero de NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif| "Cerrrar NERDTree si es la unica ventana
