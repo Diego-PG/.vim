@@ -18,8 +18,6 @@ set showmatch "Resaltar los parentesis
 set noshowmode	"No muestra el modo de vim en la parte de abajo. Lo que quitado
 		"porque ya aparece en lightline
 
-autocmd FileType ruby,yaml :setlocal tabstop=2 shiftwidth=2 expandtab "Tabs de 2 espacios para
-
 "Para que funcionen los colores de lightline
 if !has('gui_running')
   set t_Co=256
@@ -33,15 +31,26 @@ set nolist "List bloquea lo anterior
 set textwidth=0
 set wrapmargin=0
 
-"Moverse entre las lineas de la pantalla y no las reales. Mejor no utilizar j
-"y k porque puede acarrear problemas con shortcuts y plugins.
+"Moverse entre las lineas de la pantalla y no las reales
 imap <silent> <Down> <C-o>gj
 imap <silent> <Up> <C-o>gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
-"nmap j gj
-"nmap k gk
 
+"Tipo de archivo
+autocmd FileType ruby,yaml :setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType text WP
+
+"Procesador de texto
+func! WordProcessorMode()
+	setlocal textwidth=80
+	setlocal spell spelllang=es
+	setlocal tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
+	setlocal columns=80 lines=50
+	setlocal colorcolumn=
+	NERDTreeClose
+endfu
+com! WP call WordProcessorMode()
 
 "
 "Plugins
@@ -82,3 +91,4 @@ filetype plugin on
 if !has('gui_running')
   set t_Co=256
 endif
+
