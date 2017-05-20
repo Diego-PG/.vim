@@ -20,6 +20,11 @@ set noshowmode	"No muestra el modo de vim en la parte de abajo. Lo que quitado
 
 autocmd FileType ruby,yaml :setlocal tabstop=2 shiftwidth=2 expandtab "Tabs de 2 espacios para
 
+"Para que funcionen los colores de lightline
+if !has('gui_running')
+  set t_Co=256
+endif
+
 "Word wrap
 set wrap "Activar word wrap
 set linebreak "Saltar de linea solo en ciertos caracteres
@@ -70,3 +75,10 @@ nmap <leader>j :NERDTreeFind<CR>| "Ir al fichero señalado en NERDTree
 autocmd VimEnter * NERDTree "Abrir NEDRTree al encender vim
 autocmd VimEnter * wincmd p "No centrar en el fichero de NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif| "Cerrrar NERDTree si es la unica ventana
+
+"NERDCommenter
+filetype plugin on
+
+if !has('gui_running')
+  set t_Co=256
+endif
