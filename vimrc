@@ -5,7 +5,7 @@ set number
 syntax enable
 colorscheme basic-dark
 
-set lines=30 columns=107
+"set lines=30 columns=107
 set colorcolumn=80
 
 let mapleader=" " "Remapear leader key a espacio
@@ -46,7 +46,7 @@ func! WordProcessorMode()
 	setlocal textwidth=80
 	setlocal spell spelllang=es
 	setlocal tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
-	setlocal columns=80 lines=50
+"	setlocal columns=80 lines=50
 	setlocal colorcolumn=
 	NERDTreeClose
 endfu
